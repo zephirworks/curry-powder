@@ -1,0 +1,9 @@
+@import "compass/reset/utilities";
+
+html, body, h1, h2, h3, h4, h5, h6 {
+  @include reset-box-model;
+}
+
+p {
+  margin: 0;
+}

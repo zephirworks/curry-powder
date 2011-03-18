@@ -1,0 +1,18 @@
+/*
+ * Grid module:
+ *
+ * This set of macros takes care of the minimal styles necessary to set up
+ * grids of different sizes, while retaining control over their use on big- and
+ * small-screen devices. They are automatically called when the plugin is loaded.
+ */
+
+@import "treesaver/config";
+@import "grid/base";
+
+@mixin treesaver-grid-default {
+  @include -treesaver-grid-base;
+  @include -treesaver-grid-support-smallscreen-mobile;
+  @include -treesaver-grid-fixed;
+}
+
+@include treesaver-grid-default;

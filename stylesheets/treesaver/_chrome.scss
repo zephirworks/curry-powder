@@ -1,0 +1,43 @@
+/*
+ * Chrome module:
+ *
+ * These macros aid in setting up chromes.
+ */
+
+@import "treesaver/config";
+@import "treesaver/chrome/base";
+@import "treesaver/chrome/viewer";
+@import "treesaver/chrome/controls";
+
+/*
+ * Sets up the "viewer" to take up the whole screen. Use it when you don't want
+ * a controls bar, perhaps because you are using a native shell to provide
+ * navigation.
+ */
+@mixin treesaver-chrome-viewer {
+  @include -treesaver-chrome-viewer(0);
+}
+
+/*
+ * Sets up a controls bar at the top of the screen, with the provided height
+ * (30px by default), with the viewer taking up the remaining height.
+ * Minimal styling is provided for the controls, aligning `left` and `right`
+ * buttons to their respective sides.
+ */
+@mixin treesaver-chrome-viewer-with-top-controls($controls-height: 30px) {
+  @include -treesaver-chrome-viewer($controls-height, "top");
+  @include -treesaver-chrome-controls($controls-height, "top");
+}
+
+/*
+ * Sets up a controls bar at the bottom of the screen, with the provided height
+ * (30px by default), with the viewer taking up the remaining height.
+ * Minimal styling is provided for the controls, aligning `left` and `right`
+ * buttons to their respective sides.
+ */
+@mixin treesaver-chrome-viewer-with-bottom-controls($controls-height: 30px) {
+  @include -treesaver-chrome-viewer($controls-height);
+  @include -treesaver-chrome-controls($controls-height);
+}
+
+@include -treesaver-chrome-size;

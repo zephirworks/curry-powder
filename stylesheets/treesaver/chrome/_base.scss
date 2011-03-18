@@ -1,0 +1,14 @@
+//
+// Generates styles that make sure that "normal" chromes are only used on
+// devices bigger than the given width (480px by default), and small chromes
+// are used on smaller devices.
+//
+@mixin -treesaver-chrome-size {
+  .chrome {
+    min-width: $treesaver-chrome-maximum-smallscreen-width;
+    &.small {
+      min-width: 0;
+      max-width: $treesaver-chrome-maximum-smallscreen-width;
+    }
+  }
+}

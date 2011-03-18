@@ -21,15 +21,6 @@ Note that the plugin is designed to only provide the minimal styles that are
 needed in every project; it does not involve itself with how the final product
 will look.
 
-Static CSS
-----------
-
-You can still reap the benefits of this plugin even if you do not use Compass in
-your project: you can download a pre-generated CSS file (or compile it yourself)
-and add it to your project. You can then override the provided styles or add your
-own in that file (not recommended) or in a separate file that you include *after*
-this one.
-
 Install
 =======
 
@@ -47,10 +38,25 @@ Create A Project
 
     compass create <project name> -r compass-treesaver-plugin -u treesaver
 
+Build the static CSS file (optional)
+====================================
+
+You can still reap some of the benefits of this plugin even if you do not use Compass in
+your project: you can download a pre-generated CSS file (or compile it yourself)
+and add it to your project. You can then override the provided styles or add your
+own in that file (not recommended) or in a separate file that you include *after*
+this one.
+
+    rake build
+
+This will generate a `treesaver_basic.css` file in the current directory. This
+process however will call none of the optional macros, so you will be missing
+out on many useful features.
+
 Macros and classes
 ==================
 
-The macros provided by this plugin are separated in four major areas:
+The macros provided by this plugin are separated in four modules:
 
 * Basic
 * Chrome
@@ -64,7 +70,7 @@ Some of the macros are invoked immediately, and the corresponding CSS is always
 generated. Other macros are provided as tools to aid in developing your own CSS;
 you can choose whether to call them, and you can pass non-default values as needed.
 
-Basic macros
+Basic module
 ------------
 
 These macros provide basic styling: setting `overflow: hidden` on the `body` and
@@ -76,17 +82,18 @@ Configuration:
 * `$treesaver-line-height`  The `line-height` to use for Treesaver content.
 Defaults to 24px.
 
-Chrome macros
+
+Chrome module
 -------------
 
 These macros aid in setting up [chromes](https://github.com/Treesaver/treesaver/wiki/Chrome).
-In the current release none of these macros is called automatically; you need
-to call one of them explicitly. This may change in the future.
+The following macro is always loaded:
 
-* `treesaver-chrome-size($width: 480px)`
+* `treesaver-chrome-size()`
 
 Generates styles that make sure that "normal" chromes are only used on devices
-bigger than the given width (480px by default), and small chromes are used on
+bigger than the given width (configured with `$treesaver-chrome-maximum-mobile-width`,
+480px by default), and small chromes are used on
 smaller devices.
 
 To take advantage of this feature, your resources file must use the `small`
@@ -104,6 +111,9 @@ class on chromes designed for small-screen devices, e.g.:
       <div class="controls"></div>
     </div>
 
+In the current release none of the following macros is called automatically; you
+need to call one of them explicitly. This may change in the future.
+
 * `treesaver-chrome-viewer()`
 
 Sets up the "viewer" to take up the whole screen. Use it when you don't want a
@@ -113,11 +123,20 @@ controls bar, perhaps because you are using a native shell to provide navigation
 * `treesaver-chrome-viewer-with-bottom-controls($controls-height: 30px)`
 
 Sets up a controls bar with the provided height (30px by default), with the
-viewer taking up the remaining height. Minimal styling is provided for the
-controls, aligning `left` and `right` to their respective sides.
+viewer taking up the remaining height. The former macro will put the controls
+at the top of the page, the latter at the bottom. Minimal styling is provided
+for the controls, aligning `left` and `right` buttons to their respective sides.
 
-Grid
-----
+Configuration:
+
+* `$treesaver-chrome-maximum-mobile-width`  The cutoff point for chromes for
+small-screen devices. Any device wider than this will use "normal" grids,
+anything smaller will use "small" chromes.
+Defaults to 480px (the width of an iPhone in landscape orientation).
+
+
+Grid module
+-----------
 
 This set of macros takes care of the minimal styles necessary to set up
 grids of different sizes, while retaining control over their use on big- and
@@ -131,8 +150,9 @@ big-screen devices;
 * grids marked for mobile viewed on small-screen mobile devices will be set up
 to be exactly `$treesaver-grid-smallscreen-width` wide (300px by default).
 
-Layout
-------
+
+Layout module
+-------------
 
 NOTE: these macros are experimental, they may change or be removed in a future
 release.

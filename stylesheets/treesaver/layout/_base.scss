@@ -1,0 +1,15 @@
+@mixin -treesaver-layout-column-widths($colgroups, $width, $margin) {
+  @for $n from 1 through $colgroups {
+    .cols-#{$n} {
+      width: ($n - 1) * ($width + $margin) + $width;
+    }
+  }
+}
+
+@mixin -treesaver-layout-columns($cols, $width, $margin) {
+  @for $n from 1 through $cols {
+    .col-#{$n} {
+      margin-left: ($n - 1) * ($width + $margin);
+    }
+  }
+}

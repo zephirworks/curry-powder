@@ -1,0 +1,17 @@
+@mixin -treesaver-chrome-viewer-top-and-bottom($height, $side) {
+  @if $side == "top" { top: $height; bottom: 0; }
+  @if $side == "bottom" { top: 0; bottom: $height; }
+}
+
+//
+// The main viewer area, set up to fill the whole viewport. You can optionally
+// ask it to reserve some space either at the top or the bottom, mostly for
+// use in conjunction with -treesaver-chrome-controls.
+//
+@mixin -treesaver-chrome-viewer($height, $side: "bottom") {
+  .viewer {
+    @include -treesaver-chrome-viewer-top-and-bottom($height, $side);
+    left: 0;
+    right: 0;
+  }
+}

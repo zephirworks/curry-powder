@@ -1,0 +1,26 @@
+/*
+ * Basic module:
+ *
+ * Basic styling for the whole "site".
+ *
+ * These macros provide basic styling: setting `overflow: hidden` on the `body` and
+ * Treesaver containers, establishing a `line-height` grid and so on. They are
+ * automatically included when the plugin is loaded.
+ */
+
+@import "treesaver/config";
+@import "treesaver/basic/base";
+
+@mixin treesaver-basic-setup {
+  @include -treesaver-basic-setup;
+  @include -treesaver-basic-setup-group;
+  @include -treesaver-basic-error-and-loading;
+
+  // FIXME
+  .fill {
+    left: 0;
+    top: 0;
+  }
+}
+
+@include treesaver-basic-setup;

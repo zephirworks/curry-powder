@@ -1,0 +1,26 @@
+/*
+ * Layout module:
+ *
+ * NOTE: these macros are experimental, they may change or be removed in a future
+ * release. The mix of "full" and "half" widths is also very confusing.
+ */
+
+@import "layout/base";
+
+//
+// TODO document
+//
+@mixin treesaver-layout-setup($width, $margin, $steps) {
+  .grid {
+    width: $width;
+  }
+
+  .column, .container {
+    width: $width;
+    top: 0;
+    bottom: 0;
+  }
+
+  @include -treesaver-layout-column-widths($steps, $width, $margin);
+  @include -treesaver-layout-columns($steps, $width, $margin);
+}
