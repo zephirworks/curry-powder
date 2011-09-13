@@ -1,0 +1,15 @@
+//
+// This is a wrapper file used for building the static CSS file, do not use.
+//
+
+@import "treesaver";
+
+@include treesaver-chrome-viewer-with-bottom-controls(40px);
+@include treesaver-layout-setup(280px, 25px, 3);
+
+//
+// compass-treesaver-plugin doesn't handle this (yet?).
+//
+.pagenumbers {
+  display: none;
+}
