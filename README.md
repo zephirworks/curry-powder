@@ -38,14 +38,16 @@ Create A Project
 
     compass create <project name> -r compass-treesaver-plugin -u treesaver
 
-Build the static CSS file (optional)
-====================================
+Use the static CSS file (optional)
+==================================
 
 You can still reap some of the benefits of this plugin even if you do not use Compass in
-your project: you can download a pre-generated CSS file (or compile it yourself)
+your project: you can download a pre-generated CSS file ([minified](https://github.com/downloads/zephirworks/compass-treesaver-plugin/treesaver_static.min.css) or [readable](https://github.com/downloads/zephirworks/compass-treesaver-plugin/treesaver_static.css))
 and add it to your project. You can then override the provided styles or add your
 own in that file (not recommended) or in a separate file that you include *after*
 this one.
+
+You can also build it yourself:
 
     rake build
 
