@@ -7,9 +7,10 @@
 
 @import "layout/base";
 
-//
-// TODO document
-//
+/*
+ * Sets up a set of classes that can be applied to columns and containers to
+ * determine their width and position.
+ */
 @mixin treesaver-layout-setup($width, $margin, $steps) {
   .grid {
     width: $width;
