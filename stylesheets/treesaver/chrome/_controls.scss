@@ -38,3 +38,10 @@
     }
   }
 }
+
+@mixin -treesaver-chrome-controls-hide {
+  .controls {
+    display: none;
+  }
+}
+

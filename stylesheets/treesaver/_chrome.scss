@@ -16,6 +16,7 @@
  */
 @mixin treesaver-chrome-viewer {
   @include -treesaver-chrome-viewer(0);
+  @include -treesaver-chrome-controls-hide;
 }
 
 /*
