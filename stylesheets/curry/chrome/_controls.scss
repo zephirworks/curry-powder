@@ -1,17 +1,17 @@
-@mixin -treesaver-chrome-controls-top-or-bottom($side) {
+@mixin -curry-chrome-controls-top-or-bottom($side) {
   @if $side == "top" { top: 0; }
   @if $side == "bottom" { bottom: 0; }
 }
 
 //
 // A basic controls bar, anchored to either to bottom or top edges of the
-// viewspace. Use it in conjunction with -treesaver-chrome-viewer to ensure
+// viewspace. Use it in conjunction with -curry-chrome-viewer to ensure
 // viewer and controls will not overlap.
 //
-@mixin -treesaver-chrome-controls($height, $side: "bottom") {
+@mixin -curry-chrome-controls($height, $side: "bottom") {
   .controls {
     position: absolute;
-    @include -treesaver-chrome-controls-top-or-bottom($side);
+    @include -curry-chrome-controls-top-or-bottom($side);
     left: 0;
     right: 0;
     height: $height;
@@ -39,7 +39,7 @@
   }
 }
 
-@mixin -treesaver-chrome-controls-hide {
+@mixin -curry-chrome-controls-hide {
   .controls {
     display: none;
   }

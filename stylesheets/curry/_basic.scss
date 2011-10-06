@@ -8,13 +8,13 @@
  * automatically included when the plugin is loaded.
  */
 
-@import "treesaver/config";
-@import "treesaver/basic/base";
+@import "curry/config";
+@import "curry/basic/base";
 
-@mixin treesaver-basic-setup {
-  @include -treesaver-basic-setup;
-  @include -treesaver-basic-setup-group;
-  @include -treesaver-basic-error-and-loading;
+@mixin curry-basic-setup {
+  @include -curry-basic-setup;
+  @include -curry-basic-setup-group;
+  @include -curry-basic-error-and-loading;
 
   // FIXME
   .fill {
@@ -23,4 +23,4 @@
   }
 }
 
-@include treesaver-basic-setup;
+@include curry-basic-setup;

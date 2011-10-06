@@ -1,10 +1,10 @@
-@mixin -treesaver-grid-hide {
+@mixin -curry-grid-hide {
   min-width: 9001px;
   width: 9001px;
 }
 
 // XXX slightly magical, do not change
-@mixin -treesaver-grid-base {
+@mixin -curry-grid-base {
   .grid {
     top: 50%;
     z-index: 1;
@@ -16,17 +16,17 @@
 // small-screen mobile devices can only used grids marked for mobiles.
 // Note that you still have to add size-specific classes to specify grid sizes.
 //
-@mixin -treesaver-grid-support-smallscreen-mobile {
+@mixin -curry-grid-support-smallscreen-mobile {
   .grid.mobile {
-    @include -treesaver-grid-hide;
+    @include -curry-grid-hide;
   }
 
   .smallscreen.mobile .grid {
-    @include -treesaver-grid-hide;
+    @include -curry-grid-hide;
 
     &.mobile {
-      width: $treesaver-grid-smallscreen-width;
-      min-width: $treesaver-grid-smallscreen-width;
+      width: $curry-grid-smallscreen-width;
+      min-width: $curry-grid-smallscreen-width;
     }
   }
 }
@@ -37,7 +37,7 @@
 //
 // FIXME .fixed vs .full vs other?
 //
-@mixin -treesaver-grid-fixed {
+@mixin -curry-grid-fixed {
   .grid.fixed {
     max-width: none;
     max-height: none;

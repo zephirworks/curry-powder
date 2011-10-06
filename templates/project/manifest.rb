@@ -1,1 +1,1 @@
-stylesheet '_compass_treesaver.scss', :media => 'screen'
+stylesheet '_use_curry.scss', :media => 'screen'

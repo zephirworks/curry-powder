@@ -4,19 +4,19 @@
  * These macros aid in setting up chromes.
  */
 
-@import "treesaver/config";
-@import "treesaver/chrome/base";
-@import "treesaver/chrome/viewer";
-@import "treesaver/chrome/controls";
+@import "curry/config";
+@import "curry/chrome/base";
+@import "curry/chrome/viewer";
+@import "curry/chrome/controls";
 
 /*
  * Sets up the "viewer" to take up the whole screen. Use it when you don't want
  * a controls bar, perhaps because you are using a native shell to provide
  * navigation.
  */
-@mixin treesaver-chrome-viewer {
-  @include -treesaver-chrome-viewer(0);
-  @include -treesaver-chrome-controls-hide;
+@mixin curry-chrome-viewer {
+  @include -curry-chrome-viewer(0);
+  @include -curry-chrome-controls-hide;
 }
 
 /*
@@ -25,9 +25,9 @@
  * Minimal styling is provided for the controls, aligning `left` and `right`
  * buttons to their respective sides.
  */
-@mixin treesaver-chrome-viewer-with-top-controls($controls-height: 30px) {
-  @include -treesaver-chrome-viewer($controls-height, "top");
-  @include -treesaver-chrome-controls($controls-height, "top");
+@mixin curry-chrome-viewer-with-top-controls($controls-height: 30px) {
+  @include -curry-chrome-viewer($controls-height, "top");
+  @include -curry-chrome-controls($controls-height, "top");
 }
 
 /*
@@ -36,9 +36,9 @@
  * Minimal styling is provided for the controls, aligning `left` and `right`
  * buttons to their respective sides.
  */
-@mixin treesaver-chrome-viewer-with-bottom-controls($controls-height: 30px) {
-  @include -treesaver-chrome-viewer($controls-height);
-  @include -treesaver-chrome-controls($controls-height);
+@mixin curry-chrome-viewer-with-bottom-controls($controls-height: 30px) {
+  @include -curry-chrome-viewer($controls-height);
+  @include -curry-chrome-controls($controls-height);
 }
 
-@include -treesaver-chrome-size;
+@include -curry-chrome-size;

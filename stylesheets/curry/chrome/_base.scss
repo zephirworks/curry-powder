@@ -3,12 +3,12 @@
 // devices bigger than the given width (480px by default), and small chromes
 // are used on smaller devices.
 //
-@mixin -treesaver-chrome-size {
+@mixin -curry-chrome-size {
   .chrome {
-    min-width: $treesaver-chrome-maximum-smallscreen-width;
+    min-width: $curry-chrome-maximum-smallscreen-width;
     &.small {
       min-width: 0;
-      max-width: $treesaver-chrome-maximum-smallscreen-width;
+      max-width: $curry-chrome-maximum-smallscreen-width;
     }
   }
 }

@@ -1,7 +1,7 @@
 //
 // Basic styling for the whole "site"; they are pretty much mandatory.
 //
-@mixin -treesaver-basic-setup {
+@mixin -curry-basic-setup {
   .treesaver {
     body {
       overflow: hidden;
@@ -11,15 +11,15 @@
   .chrome, .viewer, .grid, .column, .container {
     position: absolute;
     overflow: hidden;
-    line-height: $treesaver-line-height;
+    line-height: $curry-line-height;
   }
 
   div, p, button {
-    line-height: $treesaver-line-height;
+    line-height: $curry-line-height;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    line-height: $treesaver-line-height;
+    line-height: $curry-line-height;
   }
 
   .hidden, .microdata {
@@ -28,7 +28,7 @@
 }
 
 // XXX is this really generic?
-@mixin -treesaver-basic-setup-group {
+@mixin -curry-basic-setup-group {
   .group {
     top: 0;
     bottom: 0;
@@ -44,7 +44,7 @@
 //
 // XXX replace magic values
 //
-@mixin -treesaver-basic-error-and-loading {
+@mixin -curry-basic-error-and-loading {
   .error, .loading {
     position: absolute;
     width: 160px;

@@ -6,13 +6,13 @@
  * small-screen devices. They are automatically called when the plugin is loaded.
  */
 
-@import "treesaver/config";
-@import "grid/base";
+@import "curry/config";
+@import "curry/grid/base";
 
-@mixin treesaver-grid-default {
-  @include -treesaver-grid-base;
-  @include -treesaver-grid-support-smallscreen-mobile;
-  @include -treesaver-grid-fixed;
+@mixin curry-grid-default {
+  @include -curry-grid-base;
+  @include -curry-grid-support-smallscreen-mobile;
+  @include -curry-grid-fixed;
 }
 
-@include treesaver-grid-default;
+@include curry-grid-default;

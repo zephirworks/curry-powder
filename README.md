@@ -1,5 +1,5 @@
-Treesaver Compass Plugin
-========================
+Curry Powder (or just Curry)
+============================
 
 A [Compass](http://compass-style.org/) plugin that makes it easy to create
 styles for [Treesaver](http://treesaverjs.com/).
@@ -11,7 +11,7 @@ the [walkthrough](https://github.com/Treesaver/treesaver/wiki/Walkthrough) in
 particular, provides detailed information on creating the content markup.
 
 However, developing a suitable stylesheet for the different devices is still
-an involved process. This plugin strives to simplify this task for both novices
+an involved process. Curry strives to simplify this task for both novices
 and experienced users, by providing a set of Compass macros that set up
 reasonable defaults to make Treesaver content look and behave as expected.
 The defaults can be overridden to tweak the generated CSS and adapt it to the
@@ -24,25 +24,25 @@ will look.
 Install
 =======
 
-    sudo gem install compass-treesaver-plugin
+    sudo gem install curry-powder
 
 If you are using [Bundler](http://gembundler.com/), for example in a Rails project,
 you can simply add the gem to your Gemfile.
 
     group :development do
-      gem 'compass-treesaver-plugin'
+      gem 'curry-powder'
     end
 
 Create A Project
 ================
 
-    compass create <project name> -r compass-treesaver-plugin -u treesaver
+    compass create <project name> -r curry -u curry
 
 Use the static CSS file (optional)
 ==================================
 
 You can still reap some of the benefits of this plugin even if you do not use Compass in
-your project: you can download a pre-generated CSS file ([minified](https://github.com/downloads/zephirworks/compass-treesaver-plugin/treesaver_static.min.css) or [readable](https://github.com/downloads/zephirworks/compass-treesaver-plugin/treesaver_static.css))
+your project: you can download a pre-generated CSS file ([minified](https://github.com/downloads/zephirworks/curry/curry_static.min.css) or [readable](https://github.com/downloads/zephirworks/curry/curry_static.css))
 and add it to your project. You can then override the provided styles or add your
 own in that file (not recommended) or in a separate file that you include *after*
 this one.
@@ -51,7 +51,7 @@ You can also build it yourself:
 
     rake build
 
-This will generate a `treesaver_basic.css` file in the current directory. This
+This will generate a `curry_static.css` file in the current directory. This
 process however will call none of the optional macros, so you will be missing
 out on many useful features.
 
@@ -81,7 +81,7 @@ automatically included when the plugin is loaded.
 
 Configuration:
 
-* `$treesaver-line-height`  The `line-height` to use for Treesaver content.
+* `$curry-line-height`  The `line-height` to use for Treesaver content.
 Defaults to 24px.
 
 
@@ -91,10 +91,10 @@ Chrome module
 These macros aid in setting up [chromes](https://github.com/Treesaver/treesaver/wiki/Chrome).
 The following macro is always loaded:
 
-* `treesaver-chrome-size()`
+* `curry-chrome-size()`
 
 Generates styles that make sure that "normal" chromes are only used on devices
-bigger than the given width (configured with `$treesaver-chrome-maximum-mobile-width`,
+bigger than the given width (configured with `$curry-chrome-maximum-mobile-width`,
 480px by default), and small chromes are used on
 smaller devices.
 
@@ -116,13 +116,13 @@ class on chromes designed for small-screen devices, e.g.:
 In the current release none of the following macros is called automatically; you
 need to call one of them explicitly. This may change in the future.
 
-* `treesaver-chrome-viewer()`
+* `curry-chrome-viewer()`
 
 Sets up the "viewer" to take up the whole screen. Use it when you don't want a
 controls bar, perhaps because you are using a native shell to provide navigation.
 
-* `treesaver-chrome-viewer-with-top-controls($controls-height: 30px)`
-* `treesaver-chrome-viewer-with-bottom-controls($controls-height: 30px)`
+* `curry-chrome-viewer-with-top-controls($controls-height: 30px)`
+* `curry-chrome-viewer-with-bottom-controls($controls-height: 30px)`
 
 Sets up a controls bar with the provided height (30px by default), with the
 viewer taking up the remaining height. The former macro will put the controls
@@ -131,7 +131,7 @@ for the controls, aligning `left` and `right` buttons to their respective sides.
 
 Configuration:
 
-* `$treesaver-chrome-maximum-mobile-width`  The cutoff point for chromes for
+* `$curry-chrome-maximum-mobile-width`  The cutoff point for chromes for
 small-screen devices. Any device wider than this will use "normal" grids,
 anything smaller will use "small" chromes.
 Defaults to 480px (the width of an iPhone in landscape orientation).
@@ -150,7 +150,7 @@ In particular:
 big-screen devices;
 * small-screen mobile devices will never use non-mobile grids;
 * grids marked for mobile viewed on small-screen mobile devices will be set up
-to be exactly `$treesaver-grid-smallscreen-width` wide (300px by default).
+to be exactly `$curry-grid-smallscreen-width` wide (300px by default).
 
 
 Layout module
@@ -159,7 +159,7 @@ Layout module
 NOTE: these macros are experimental, they may change or be removed in a future
 release.
 
-* `treesaver-layout-setup($width, $margin, $steps)`
+* `curry-layout-setup($width, $margin, $steps)`
 
 Sets up a set of classes that can be applied to columns and containers to
 determine their width and position. The mandatory arguments are:
@@ -186,7 +186,7 @@ For instance, given the following resource:
       <div class="column col-2"></div>
     </div>
 
-calling `treesaver-layout-setup(300px, 20px, 3)` would result in:
+calling `curry-layout-setup(300px, 20px, 3)` would result in:
 
 * grid: `width: 620px`;
 * title and author: `width: 620px`;
