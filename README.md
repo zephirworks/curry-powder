@@ -58,5 +58,5 @@ out on many useful features.
 Documentation
 =============
 
-See the [wiki](https//github.com/zephirworks/curry/wiki) for documentation on the available
+See the [wiki](https://github.com/zephirworks/curry/wiki) for documentation on the available
 mixins and variables.
