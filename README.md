@@ -52,3 +52,10 @@ Documentation
 
 See the [wiki](https://github.com/zephirworks/curry-powder/wiki) for documentation on the available
 mixins and variables.
+
+License
+=======
+
+Curry Powder is released under the MIT license.
+
+Each single Curry may be released under a difference license.
