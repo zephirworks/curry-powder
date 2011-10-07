@@ -1,8 +1,16 @@
 Curry Powder (or just Curry)
 ============================
 
-A [Compass](http://compass-style.org/) plugin that makes it easy to create
-styles for [Treesaver](http://treesaverjs.com/).
+Curry is a library of graphic templates for [Treesaver](http://treesaverjs.com/).
+
+Curry Powder is the framework at the basis of Curry: it offers a set of helpers
+to build your own theme.
+
+Curry is implemented on top of [Compass](http://compass-style.org/), but
+individual Curries are also delivered as compiled CSS for stand-alone use.
+
+Background information
+======================
 
 [Treesaver](http://treesaverjs.com/) is a JavaScript framework for creating
 magazine-style layouts using standards-compliant HTML and CSS. The
@@ -17,9 +25,10 @@ reasonable defaults to make Treesaver content look and behave as expected.
 The defaults can be overridden to tweak the generated CSS and adapt it to the
 needs of a project.
 
-Note that the plugin is designed to only provide the minimal styles that are
-needed in every project; it does not involve itself with how the final product
-will look.
+Curry Powder (the project you are looking at) only provide the minimal styles
+that are needed in every project; it does not involve itself with how the
+final product will look. If you are looking for a ready-to-use template, have
+a look at [available Curries](https://github.com/zephirworks/curry/wiki).
 
 Install
 =======
