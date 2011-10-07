@@ -28,7 +28,7 @@ needs of a project.
 Curry Powder (the project you are looking at) only provide the minimal styles
 that are needed in every project; it does not involve itself with how the
 final product will look. If you are looking for a ready-to-use template, have
-a look at [available Curries](https://github.com/zephirworks/curry/wiki).
+a look at [available Curries](https://github.com/zephirworks/curry-powder/wiki).
 
 Install
 =======
@@ -50,5 +50,5 @@ Create A Project
 Documentation
 =============
 
-See the [wiki](https://github.com/zephirworks/curry/wiki) for documentation on the available
+See the [wiki](https://github.com/zephirworks/curry-powder/wiki) for documentation on the available
 mixins and variables.
