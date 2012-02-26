@@ -1,16 +1,22 @@
-/*
- * Basic module:
- *
- * Basic styling for the whole "site".
- *
- * These macros provide basic styling: setting `overflow: hidden` on the `body` and
- * Treesaver containers, establishing a `line-height` grid and so on. They are
- * automatically included when the plugin is loaded.
- */
+//-
+// Basic module:
+//
+// Basic styling for the whole "site".
+//
+// These macros provide basic styling: setting `overflow: hidden` on the `body` and
+// Treesaver containers, establishing a `line-height` grid and so on. They are
+// automatically included when the plugin is loaded.
+//
+// Variables:
+// * 
+//
 
 @import "curry/config";
 @import "curry/basic/base";
 
+//-
+// Basic setup
+//
 @mixin curry-basic-setup {
   @include -curry-basic-setup;
   @include -curry-basic-setup-group;
