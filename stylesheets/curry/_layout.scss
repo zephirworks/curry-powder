@@ -12,10 +12,6 @@
  * determine their width and position.
  */
 @mixin curry-layout-setup($width, $margin, $steps) {
-  .grid {
-    width: $width;
-  }
-
   .column, .container {
     width: $width;
     top: 0;
