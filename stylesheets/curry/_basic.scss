@@ -21,12 +21,6 @@
   @include -curry-basic-setup;
   @include -curry-basic-setup-group;
   @include -curry-basic-error-and-loading;
-
-  // FIXME
-  .fill {
-    left: 0;
-    top: 0;
-  }
 }
 
 @include curry-basic-setup;
