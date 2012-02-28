@@ -11,7 +11,6 @@ Gem::Specification.new do |s|
   s.email = %w{andrea.campi@zephirworks.com}
   s.has_rdoc = false
   s.files = [
-    "curry-powder.gemspec",
     "lib/curry.rb",
     "stylesheets/_curry.scss",
     "stylesheets/curry/_basic.scss",
