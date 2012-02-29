@@ -16,3 +16,7 @@ button::-moz-focus-inner {
 sup, sub {
   line-height: 0;
 }
+
+blockquote * {
+  display: inline;
+}
