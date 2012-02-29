@@ -2,11 +2,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{curry-powder}
-  s.version = "0.5.0"
+  s.version = "0.6.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 1.3.5")
   s.authors = ["Andrea Campi"]
-  s.date = %q{2012-02-28}
+  s.date = %q{2012-02-29}
   s.description = %q{A Compass plugin to provide basic styles for treesaver.js.}
   s.email = %w{andrea.campi@zephirworks.com}
   s.has_rdoc = false
